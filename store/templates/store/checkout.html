@@ -73,6 +73,15 @@
     if(shipping == "False"){
         document.getElementById("shipping-info").innerHTML = ""
     }
+
+    let form = document.getElementById('form')
+
+    form.addEventListener('submit', function(event){
+        event.preventDefault()
+        console.log("Form submitting...")
+        document.getElementById('form-button').classList.add('hidden')
+        document.getElementById('payment-info').classList.remove('hidden')
+    })
 </script>
 
 {% endblock contant %}
